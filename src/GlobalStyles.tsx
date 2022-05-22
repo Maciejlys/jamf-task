@@ -22,7 +22,8 @@ export const GlobalStyles = createGlobalStyle`
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  /* font-family: 'Antonio', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.3rem;
 }
 

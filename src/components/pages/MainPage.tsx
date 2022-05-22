@@ -1,7 +1,15 @@
 import React from "react";
+import { Container } from "../../GlobalStyles";
+import { Footer } from "../organisms/Footer";
+import { Header } from "../organisms/Header";
 
 interface MainPageProps {}
 
 export const MainPage: React.FC<MainPageProps> = () => {
-  return <>Hi</>;
+  return (
+    <Container>
+      <Header />
+      <Footer />
+    </Container>
+  );
 };
