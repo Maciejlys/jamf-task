@@ -3,34 +3,33 @@ import styled from "styled-components";
 
 const MainContentWrapper = styled.div`
   display: flex;
-  max-width: 680px;
+  justify-content: center;
+  align-items: flex-end;
 `;
 
-const WhiteBg = styled.div`
-  width: 15%;
-  background-color: #fff;
+const WhiteBox = styled.div`
+  width: 17%;
+  background-color: white;
 `;
 
-const DarkBg = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
+const DarkBox = styled.div`
+  width: 83%;
   background-color: #e1e5ea;
 `;
 
 const MainPhotoImg = styled.img`
+  margin: 17% 0;
   position: relative;
-  max-height: 85%;
-  left: -15%;
+  left: -17%;
 `;
 
 export const MainPhoto: React.FC = () => {
   return (
     <MainContentWrapper>
-      <WhiteBg />
-      <DarkBg>
+      <WhiteBox></WhiteBox>
+      <DarkBox>
         <MainPhotoImg src={require("../../assets/photo.png")} />
-      </DarkBg>
+      </DarkBox>
     </MainContentWrapper>
   );
 };

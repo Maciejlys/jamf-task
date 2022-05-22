@@ -14,7 +14,7 @@ interface TextProps {
 const Text = styled.h4<TextProps>`
   ${({ size }) => `font-size: ${size}px;`}
   font-weight: 600;
-  @media (max-width: 768px) {
+  @media (max-width: 468px) {
     display: none;
   }
 `;

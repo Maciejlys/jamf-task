@@ -8,6 +8,7 @@ const FooterWrapper = styled.div`
   justify-content: space-between;
   padding: 0.7rem 0;
   align-items: center;
+  margin-top: 1rem;
 `;
 
 const Text = styled.h4`
