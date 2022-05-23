@@ -3,24 +3,21 @@ import styled from "styled-components";
 
 interface TitleProps {
   size: number;
-  children: React.ReactNode;
+  font: string;
+  children?: React.ReactNode;
 }
 
-interface TitleStyleProps {
-  size: number;
-}
-
-const TitleStyle = styled.h1<TitleStyleProps>`
+const TitleStyle = styled.h1<TitleProps>`
   margin-top: 20%;
-  font-family: "Antonio", sans-serif;
-  font-size: ${(props) => props.size}px;
+  font-family: ${({ font }) => font}, sans-serif;
+  font-size: ${({ size }) => size}px;
 
   @media (max-width: 1200px) {
-    font-size: ${(props) => props.size * 0.8}px;
+    font-size: ${({ size }) => size * 0.8}px;
   }
 
   @media (max-width: 1000px) {
-    font-size: ${(props) => props.size * 0.6}px;
+    font-size: ${({ size }) => size * 0.6}px;
     margin-top: 10%;
   } ;
 `;
@@ -32,10 +29,12 @@ const Center = styled.div`
   } ;
 `;
 
-export const Title: React.FC<TitleProps> = ({ size, children }) => {
+export const Title: React.FC<TitleProps> = ({ size, children, font }) => {
   return (
     <Center>
-      <TitleStyle size={size}>{children}</TitleStyle>
+      <TitleStyle font={font} size={size}>
+        {children}
+      </TitleStyle>
     </Center>
   );
 };

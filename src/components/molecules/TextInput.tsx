@@ -4,6 +4,7 @@ import styled from "styled-components";
 interface TextInputProps {
   setter: (input: string) => void;
   label: string;
+  value: string;
 }
 
 const TextInputWrapper = styled.div`
@@ -39,11 +40,13 @@ const Input = styled.input`
   }
 `;
 
-export const TextInput: React.FC<TextInputProps> = ({ label, setter }) => {
-  const [term, setTerm] = useState("");
+export const TextInput: React.FC<TextInputProps> = ({
+  label,
+  setter,
+  value,
+}) => {
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     const newValue = e.currentTarget.value;
-    setTerm(newValue);
     setter(newValue);
   };
   return (
@@ -53,7 +56,7 @@ export const TextInput: React.FC<TextInputProps> = ({ label, setter }) => {
         <Required>Pole wymagane</Required>
       </Header>
 
-      <Input type="text" placeholder="" value={term} onChange={handleChange} />
+      <Input type="text" placeholder="" value={value} onChange={handleChange} />
     </TextInputWrapper>
   );
 };

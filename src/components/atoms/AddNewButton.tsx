@@ -1,6 +1,8 @@
 import React from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import styled from "styled-components";
+import { useAppDispatch } from "../../app/hooks";
+import { toggleModal } from "../../features/modal/modalSlice";
 
 interface AddNewButonProps {
   onClick: () => void;
@@ -27,8 +29,9 @@ const ButtonWrapper = styled.div`
 `;
 
 export const AddNewButton: React.FC<AddNewButonProps> = ({ onClick, size }) => {
+  const dispatch = useAppDispatch();
   return (
-    <ButtonWrapper onClick={onClick}>
+    <ButtonWrapper onClick={() => dispatch(toggleModal())}>
       <Text size={size}>Dodaj nowy produkt</Text>
       <AiOutlinePlusCircle size={size + 5} />
     </ButtonWrapper>

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useAppDispatch } from "../../app/hooks";
+import { toggleModal } from "../../features/modal/modalSlice";
 import { Button } from "../atoms/Button";
 
 const InformationWraper = styled.div`
@@ -33,13 +35,16 @@ const Paragraph = styled.p`
 `;
 
 export const Information: React.FC = () => {
+  const dispatch = useAppDispatch();
   return (
     <InformationWraper>
       <Paragraph>
         Poniżej wyświetlana jest lista produktów. Twoim zadaniem jest stworzenie
         mechanizmu, który będzie dodawał nowy produkt do listy. Powodzenia!
       </Paragraph>
-      <Button onClick={() => {}}>Dodaj nowy produkt</Button>
+      <Button onClick={() => dispatch(toggleModal())}>
+        Dodaj nowy produkt
+      </Button>
     </InformationWraper>
   );
 };

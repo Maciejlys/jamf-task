@@ -13,6 +13,7 @@ const ButtonStyle = styled.button`
   background-color: #c4c4c4;
   outline: none;
   border: none;
+  width: fit-content;
   :hover {
     background-color: #b3b3b3;
   }
