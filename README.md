@@ -83,7 +83,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Maciej Łyszczarz - [@twitter_handle](https://www.linkedin.com/in/maciej-%C5%82yszczarz-258862213/)
+Maciej Łyszczarz - [Linkedin](https://www.linkedin.com/in/maciej-%C5%82yszczarz-258862213/)
 
 Project Link: [https://github.com/Maciejlys/jamf-task](https://github.com/Maciejlys/jamf-task)
 
