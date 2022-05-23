@@ -1,36 +1,22 @@
-import { secureHeapUsed } from "crypto";
+import { products } from "../../data/products";
+import { ProductType } from "../../data/ProductType";
+import { addNewProduct } from "./productsSlice";
+import productsReducer from "./productsSlice";
 
-// import counterReducer, {
-//   CounterState,
-//   increment,
-//   decrement,
-//   incrementByAmount,
-// } from "./productsSlice";
+describe("counter reducer", () => {
+  const initialState = {
+    products: products,
+  };
 
-// describe("counter reducer", () => {
-//   const initialState: CounterState = {
-//     value: 3,
-//     status: "idle",
-//   };
-//   it("should handle initial state", () => {
-//     expect(counterReducer(undefined, { type: "unknown" })).toEqual({
-//       value: 0,
-//       status: "idle",
-//     });
-//   });
+  const dummyProduct: ProductType = {
+    src: "https://gagadget.com/media/cache/a4/59/a4595679120e655850aa705b90df8282.jpg",
+    name: "Apple watch",
+    price: 1999.0,
+  };
 
-//   it("should handle increment", () => {
-//     const actual = counterReducer(initialState, increment());
-//     expect(actual.value).toEqual(4);
-//   });
-
-//   it("should handle decrement", () => {
-//     const actual = counterReducer(initialState, decrement());
-//     expect(actual.value).toEqual(2);
-//   });
-
-//   it("should handle incrementByAmount", () => {
-//     const actual = counterReducer(initialState, incrementByAmount(2));
-//     expect(actual.value).toEqual(5);
-//   });
-// });
+  it("should handle adding products", () => {
+    const beforeAdding = products.length;
+    const actual = productsReducer(initialState, addNewProduct(dummyProduct));
+    expect(actual.products.length).toEqual(beforeAdding + 1);
+  });
+});

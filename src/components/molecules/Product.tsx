@@ -12,11 +12,13 @@ const ProductImage = styled.img`
 
 const ProductName = styled.p`
   font-size: 20px;
+  margin: 0.8rem 0;
 `;
 
 const ProductPrice = styled.p`
   font-size: 20px;
   font-weight: 900;
+  margin: 0.8rem 0;
 `;
 
 export const Product: React.FC<ProductType> = ({ src, name, price }) => {

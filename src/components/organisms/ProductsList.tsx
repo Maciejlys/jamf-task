@@ -8,7 +8,7 @@ export const ProductsListWrapper = styled.div`
   margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 2rem 1rem;
   @media (max-width: 900px) {
     place-items: center;
   }
