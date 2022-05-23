@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { isImgToSmall } from "../../utils/imgUtils";
 import { ProductType } from "../../data/ProductType";
 import styled from "styled-components";
 
@@ -7,7 +8,9 @@ const ProductWrapper = styled.div`
 `;
 
 const ProductImage = styled.img`
-  min-height: 280px;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
 `;
 
 const ProductName = styled.p`

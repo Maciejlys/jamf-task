@@ -11,6 +11,7 @@ const ButtonStyle = styled.button`
   font-weight: 900;
   padding: 1.1rem 1rem;
   background-color: #c4c4c4;
+  cursor: pointer;
   outline: none;
   border: none;
   width: fit-content;

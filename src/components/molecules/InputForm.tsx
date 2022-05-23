@@ -5,7 +5,7 @@ import { Button } from "../atoms/Button";
 import { useAppDispatch } from "../../app/hooks";
 import { addNewProduct } from "../../features/products/productsSlice";
 import { toggleModal } from "../../features/modal/modalSlice";
-import { intParser } from "../../utils/inputUtils";
+import { checkIfInputsAreValid } from "../../utils/inputUtils";
 
 export const InputFormWrapper = styled.div`
   display: flex;
@@ -17,6 +17,7 @@ export const InputForm: React.FC = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [src, setSrc] = useState("");
+  const [errorMsg, seterrorMsg] = useState("");
   const dispatch = useAppDispatch();
 
   const clearInputs = () => {
@@ -26,9 +27,15 @@ export const InputForm: React.FC = () => {
   };
 
   const ButtonHandler = () => {
+    try {
+      checkIfInputsAreValid(name, price, src);
+    } catch (error) {
+      if (error instanceof Error) seterrorMsg(error.message);
+      return;
+    }
     const newProduct = {
       name,
-      price: intParser(price),
+      price: parseInt(price),
       src,
     };
     dispatch(addNewProduct(newProduct));
