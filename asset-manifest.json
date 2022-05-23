@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/jamf-task/static/js/main.6904025d.js",
+    "main.js": "/jamf-task/static/js/main.e2e91596.js",
     "static/media/photo.png": "/jamf-task/static/media/photo.96538418ca7442ccb0d2.png",
     "index.html": "/jamf-task/index.html",
-    "main.6904025d.js.map": "/jamf-task/static/js/main.6904025d.js.map"
+    "main.e2e91596.js.map": "/jamf-task/static/js/main.e2e91596.js.map"
   },
   "entrypoints": [
-    "static/js/main.6904025d.js"
+    "static/js/main.e2e91596.js"
   ]
 }
