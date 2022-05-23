@@ -3,7 +3,7 @@ import { ProductType } from "../../data/ProductType";
 import { addNewProduct } from "./productsSlice";
 import productsReducer from "./productsSlice";
 
-describe("counter reducer", () => {
+describe("prodcuts reducer", () => {
   const initialState = {
     products: products,
   };
