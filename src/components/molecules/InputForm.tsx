@@ -46,7 +46,7 @@ export const InputForm: React.FC = () => {
     const newProduct = {
       name,
       price: parseFloat(price),
-      src,
+      src: src.replaceAll(" ", ""),
     };
     dispatch(addNewProduct(newProduct));
     dispatch(toggleModal());

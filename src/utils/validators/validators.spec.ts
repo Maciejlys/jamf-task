@@ -1,5 +1,5 @@
 import { urlInputValidator } from "./validators";
-import { intChecker } from "./validators";
+import { floatCheck } from "./validators";
 
 import { ErrorMsg } from "../errorMsgs";
 
@@ -43,16 +43,31 @@ describe("url validation", () => {
 describe("number validation", () => {
   it("Is not a number", () => {
     const test = "test";
-    expect(intChecker(test)).toEqual(false);
+    expect(floatCheck(test)).toEqual(false);
   });
 
   it("Is not a number", () => {
     const test = "12test";
-    expect(intChecker(test)).toEqual(false);
+    expect(floatCheck(test)).toEqual(false);
   });
 
   it("Is a number", () => {
     const test = "123";
-    expect(intChecker(test)).toEqual(true);
+    expect(floatCheck(test)).toEqual(true);
+  });
+
+  it("Is a number", () => {
+    const test = "123.1";
+    expect(floatCheck(test)).toEqual(true);
+  });
+
+  it("Is a number", () => {
+    const test = "123.1";
+    expect(floatCheck(test)).toEqual(true);
+  });
+
+  it("Number with , shouldn't work", () => {
+    const test = "123,1";
+    expect(floatCheck(test)).toEqual(false);
   });
 });

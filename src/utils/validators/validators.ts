@@ -14,7 +14,7 @@ export const urlInputValidator = (link: string) => {
   }
 };
 
-export const intChecker = (value: string): boolean => {
+export const floatCheck = (value: string): boolean => {
   return /^-?\d+(?:[.]\d*?)?$/.test(value);
 };
 
@@ -27,7 +27,7 @@ export const checkIfInputsAreValid = (
     throw Error(ErrorMsg.EMPTY_FIELDS);
   }
 
-  if (!intChecker(price)) {
+  if (!floatCheck(price)) {
     throw Error(ErrorMsg.INVALID_PRICE);
   }
 
