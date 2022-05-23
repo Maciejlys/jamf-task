@@ -7,7 +7,7 @@ interface TextInputProps {
 }
 
 const TextInputWrapper = styled.div`
-  width: 80%;
+  width: 100%;
 `;
 
 const Header = styled.div`

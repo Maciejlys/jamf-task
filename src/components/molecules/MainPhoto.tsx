@@ -4,7 +4,9 @@ import styled from "styled-components";
 const MainContentWrapper = styled.div`
   display: flex;
   justify-content: center;
+  max-width: 580px;
   align-items: flex-end;
+  margin: 0 auto;
 `;
 
 const WhiteBox = styled.div`
