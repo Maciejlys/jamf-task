@@ -3,8 +3,10 @@ import { useAppSelector } from "../../app/hooks";
 import { selectProducts } from "../../features/products/productsSlice";
 import { Product } from "../molecules/Product";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { projectContainer } from "../../utils/animations/variants";
 
-export const ProductsListWrapper = styled.div`
+export const ProductsListWrapper = styled(motion.div)`
   margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -17,7 +19,11 @@ export const ProductsListWrapper = styled.div`
 export const ProductsList: React.FC = () => {
   const products = useAppSelector(selectProducts);
   return (
-    <ProductsListWrapper>
+    <ProductsListWrapper
+      variants={projectContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}>
       {products.map((product, i) => (
         <Product key={i} {...product} />
       ))}

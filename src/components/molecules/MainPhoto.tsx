@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { OnHoverZoom } from "../../utils/animations/motions";
 
 const MainContentWrapper = styled.div`
   display: flex;
@@ -30,7 +31,9 @@ export const MainPhoto: React.FC = () => {
     <MainContentWrapper>
       <WhiteBox></WhiteBox>
       <DarkBox>
-        <MainPhotoImg src={require("../../assets/photo.png")} />
+        <OnHoverZoom>
+          <MainPhotoImg src={require("../../assets/photo.png")} />
+        </OnHoverZoom>
       </DarkBox>
     </MainContentWrapper>
   );

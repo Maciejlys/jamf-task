@@ -1,19 +1,17 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { toggleModal } from "../../features/modal/modalSlice";
+import { modalVariant } from "../../utils/animations/variants";
 import { AvailableFonts } from "../../utils/availableFonts";
 import { ExitIcon } from "../atoms/ExitIcon";
 import { Title } from "../atoms/Title";
 import { InputForm } from "../molecules/InputForm";
+import { selectIsOpen } from "../../features/modal/modalSlice";
 
-interface ModalProps {
-  isOpen: boolean;
-}
-
-const ModalWrapper = styled.div<ModalProps>`
+const ModalWrapper = styled(motion.div)`
   position: fixed;
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   padding: 2rem 4rem;
   width: 100%;
   max-width: 640px;
@@ -29,10 +27,14 @@ const ExitButtonPosition = styled.div`
 `;
 
 export const Modal: React.FC = () => {
-  const isOpen = useAppSelector((state) => state.modal.isOpen);
+  const isOpen = useAppSelector(selectIsOpen);
   const dispatch = useAppDispatch();
+
   return (
-    <ModalWrapper isOpen={isOpen}>
+    <ModalWrapper
+      variants={modalVariant}
+      initial={modalVariant.initial}
+      animate={isOpen ? "shown" : "hidden"}>
       <ExitButtonPosition>
         <ExitIcon size={24} onClick={() => dispatch(toggleModal())} />
       </ExitButtonPosition>

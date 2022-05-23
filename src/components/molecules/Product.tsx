@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { isImgToSmall } from "../../utils/imgUtils";
+import React from "react";
 import { ProductType } from "../../data/ProductType";
 import styled from "styled-components";
+import { OnHoverZoom } from "../../utils/animations/motions";
+import { projectItem } from "../../utils/animations/variants";
+import { motion } from "framer-motion";
 
-const ProductWrapper = styled.div`
+const ProductWrapper = styled(motion.div)`
   max-width: 280px;
 `;
 
@@ -26,8 +28,13 @@ const ProductPrice = styled.p`
 
 export const Product: React.FC<ProductType> = ({ src, name, price }) => {
   return (
-    <ProductWrapper>
-      <ProductImage src={src} alt={name} />
+    <ProductWrapper
+      variants={projectItem}
+      viewport={{ once: true }}
+      whileInView="show">
+      <OnHoverZoom>
+        <ProductImage src={src} alt={name} />
+      </OnHoverZoom>
       <ProductName>{name}</ProductName>
       <ProductPrice>{price.toFixed(2)} zł</ProductPrice>
     </ProductWrapper>
