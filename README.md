@@ -6,7 +6,6 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://maciejlys.github.io/jamf-task/">View Demo</a>
@@ -33,7 +32,6 @@
         <li><a href="#available-scripts">Available Scripts</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -42,13 +40,18 @@
 
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Recruitment task for [Jamf](https://www.linkedin.com/company/jamf-software/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
 - [React.js](https://reactjs.org/)
+- [Redux-toolkit](https://redux-toolkit.js.org/)
+- [Styled-components](https://styled-components.com/)
+- [Framer-motion](https://www.framer.com/)
+- [React-icons](https://react-icons.github.io/react-icons/)
+- [Typescript](https://www.typescriptlang.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -72,16 +75,6 @@ You will also see any lint errors in the console.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- LICENSE -->
 
 ## License
@@ -94,8 +87,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Maciej Łyszczarz - [@twitter_handle](https://www.linkedin.com/in/maciej-%C5%82yszczarz-258862213/)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Maciejlys/jamf-task](https://github.com/Maciejlys/jamf-task)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
