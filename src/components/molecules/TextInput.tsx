@@ -5,6 +5,7 @@ interface TextInputProps {
   setter: (input: string) => void;
   label: string;
   value: string;
+  maxLenght?: number;
 }
 
 const TextInputWrapper = styled.div`
@@ -45,6 +46,7 @@ export const TextInput: React.FC<TextInputProps> = ({
   label,
   setter,
   value,
+  maxLenght = 1000,
 }) => {
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     const newValue = e.currentTarget.value;
@@ -57,7 +59,13 @@ export const TextInput: React.FC<TextInputProps> = ({
         <Required>Pole wymagane</Required>
       </Header>
 
-      <Input type="text" placeholder="" value={value} onChange={handleChange} />
+      <Input
+        type="text"
+        placeholder=""
+        value={value}
+        onChange={handleChange}
+        maxLength={maxLenght}
+      />
     </TextInputWrapper>
   );
 };

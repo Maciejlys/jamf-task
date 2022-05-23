@@ -45,7 +45,7 @@ export const InputForm: React.FC = () => {
     }
     const newProduct = {
       name,
-      price: parseInt(price),
+      price: parseFloat(price),
       src,
     };
     dispatch(addNewProduct(newProduct));
@@ -56,10 +56,12 @@ export const InputForm: React.FC = () => {
     <>
       <InputsWrapper>
         <TextInput
+          maxLenght={15}
           label="Nazwa produktu"
           value={name}
           setter={setName}></TextInput>
         <TextInput
+          maxLenght={15}
           label="Cena produktu"
           value={price}
           setter={setPrice}></TextInput>

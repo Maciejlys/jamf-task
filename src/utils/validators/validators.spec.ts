@@ -6,7 +6,7 @@ import { ErrorMsg } from "../errorMsgs";
 describe("url validation", () => {
   it("Is not a link", () => {
     const link = "test";
-    expect(() => urlInputValidator(link)).toThrowError(ErrorMsg.HTTP_HTTPS);
+    expect(() => urlInputValidator(link)).toThrowError(ErrorMsg.INVALID_URL);
   });
 
   it("lacks http or https", () => {
@@ -32,6 +32,11 @@ describe("url validation", () => {
   it("valid link", () => {
     const link = "https://google.com";
     expect(urlInputValidator(link)).toEqual(true);
+  });
+
+  it("valid link", () => {
+    const link = "https://google";
+    expect(() => urlInputValidator(link)).toThrowError(ErrorMsg.INVALID_URL);
   });
 });
 

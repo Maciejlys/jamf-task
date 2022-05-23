@@ -1,6 +1,7 @@
 import { ErrorMsg } from "../../utils/errorMsgs";
 
 export const urlInputValidator = (link: string) => {
+  if (!link.includes(".")) throw Error(ErrorMsg.INVALID_URL);
   if (link.startsWith("http")) {
     try {
       new URL(link);
@@ -14,7 +15,7 @@ export const urlInputValidator = (link: string) => {
 };
 
 export const intChecker = (value: string): boolean => {
-  return /^\d+$/.test(value);
+  return /^-?\d+(?:[.]\d*?)?$/.test(value);
 };
 
 export const checkIfInputsAreValid = (
