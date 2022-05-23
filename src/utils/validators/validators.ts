@@ -1,4 +1,4 @@
-import { ErrorMsg } from "./errorMsgs";
+import { ErrorMsg } from "../../utils/errorMsgs";
 
 export const urlInputValidator = (link: string) => {
   if (link.startsWith("http")) {

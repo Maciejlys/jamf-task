@@ -5,7 +5,7 @@ import { Button } from "../atoms/Button";
 import { useAppDispatch } from "../../app/hooks";
 import { addNewProduct } from "../../features/products/productsSlice";
 import { toggleModal } from "../../features/modal/modalSlice";
-import { checkIfInputsAreValid } from "../../utils/validators";
+import { checkIfInputsAreValid } from "../../utils/validators/validators";
 
 const InputsWrapper = styled.div`
   margin: 3rem 0;

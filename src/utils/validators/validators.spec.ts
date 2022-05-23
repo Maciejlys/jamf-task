@@ -1,5 +1,7 @@
 import { urlInputValidator } from "./validators";
-import { ErrorMsg } from "./errorMsgs";
+import { intChecker } from "./validators";
+
+import { ErrorMsg } from "../errorMsgs";
 
 describe("url validation", () => {
   it("Is not a link", () => {
@@ -30,5 +32,22 @@ describe("url validation", () => {
   it("valid link", () => {
     const link = "https://google.com";
     expect(urlInputValidator(link)).toEqual(true);
+  });
+});
+
+describe("number validation", () => {
+  it("Is not a number", () => {
+    const test = "test";
+    expect(intChecker(test)).toEqual(false);
+  });
+
+  it("Is not a number", () => {
+    const test = "12test";
+    expect(intChecker(test)).toEqual(false);
+  });
+
+  it("Is a number", () => {
+    const test = "123";
+    expect(intChecker(test)).toEqual(true);
   });
 });

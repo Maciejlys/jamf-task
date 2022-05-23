@@ -30,8 +30,9 @@ const InputLabel = styled.label`
 
 const Input = styled.input`
   width: 100%;
-  font-size: 20px;
-  height: 32px;
+  font-size: 24px;
+  height: 56px;
+  padding: 0.5rem;
   border: 1px solid #888;
   outline: none;
 
