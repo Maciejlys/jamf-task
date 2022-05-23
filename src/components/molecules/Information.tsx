@@ -8,13 +8,14 @@ const InformationWraper = styled.div`
   position: relative;
   background-color: #fff;
   width: 100%;
+  max-width: 550px;
   padding: 3rem;
-  max-width: 640px;
   margin: 0 auto;
 
   @media (min-width: 900px) {
     left: -10.5%;
     width: 110.5%;
+    max-width: 640px;
   }
   @media (max-width: 468px) {
     padding: 3rem 0;

@@ -4,7 +4,7 @@
 // I wanted to object-fit cover or contain depending on image size as product image is fixed
 // at 280x280
 
-const isTooSmall = (width: number, height: number) => {
+export const isTooSmall = (width: number, height: number) => {
   return width < 280 || height < 280;
 };
 

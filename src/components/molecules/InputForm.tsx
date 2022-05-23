@@ -5,12 +5,21 @@ import { Button } from "../atoms/Button";
 import { useAppDispatch } from "../../app/hooks";
 import { addNewProduct } from "../../features/products/productsSlice";
 import { toggleModal } from "../../features/modal/modalSlice";
-import { checkIfInputsAreValid } from "../../utils/inputUtils";
+import { checkIfInputsAreValid } from "../../utils/validators";
 
-export const InputFormWrapper = styled.div`
+const InputsWrapper = styled.div`
+  margin: 3rem 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
+`;
+
+const ErrorWrapper = styled.div`
+  height: 2rem;
+  margin-bottom: 2rem;
+`;
+const ErrorMsg = styled.p`
+  color: red;
 `;
 
 export const InputForm: React.FC = () => {
@@ -24,6 +33,7 @@ export const InputForm: React.FC = () => {
     setName("");
     setPrice("");
     setSrc("");
+    seterrorMsg("");
   };
 
   const ButtonHandler = () => {
@@ -43,20 +53,25 @@ export const InputForm: React.FC = () => {
     clearInputs();
   };
   return (
-    <InputFormWrapper>
-      <TextInput
-        label="Nazwa produktu"
-        value={name}
-        setter={setName}></TextInput>
-      <TextInput
-        label="Cena produktu"
-        value={price}
-        setter={setPrice}></TextInput>
-      <TextInput
-        label="Adres URL obrazka"
-        value={src}
-        setter={setSrc}></TextInput>
+    <>
+      <InputsWrapper>
+        <TextInput
+          label="Nazwa produktu"
+          value={name}
+          setter={setName}></TextInput>
+        <TextInput
+          label="Cena produktu"
+          value={price}
+          setter={setPrice}></TextInput>
+        <TextInput
+          label="Adres URL obrazka"
+          value={src}
+          setter={setSrc}></TextInput>
+      </InputsWrapper>
+      <ErrorWrapper>
+        <ErrorMsg>{errorMsg}</ErrorMsg>
+      </ErrorWrapper>
       <Button onClick={ButtonHandler}>Dodaj produkt</Button>
-    </InputFormWrapper>
+    </>
   );
 };

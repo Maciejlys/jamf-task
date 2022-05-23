@@ -31,7 +31,7 @@ const InputLabel = styled.label`
 const Input = styled.input`
   width: 100%;
   font-size: 20px;
-  height: 2rem;
+  height: 32px;
   border: 1px solid #888;
   outline: none;
 
