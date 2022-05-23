@@ -4,7 +4,7 @@
 <h3 align="center">Jamf task</h3>
 
   <p align="center">
-    project_description
+    Recruitment task for Jamf
     <br />
     <br />
     <br />
@@ -39,10 +39,6 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-Recruitment task for [Jamf](https://www.linkedin.com/company/jamf-software/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
