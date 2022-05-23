@@ -11,6 +11,8 @@ import { InputForm } from "../molecules/InputForm";
 import { selectIsOpen } from "../../features/modal/modalSlice";
 
 const ModalWrapper = styled(motion.div)`
+  max-height: 100%;
+  overflow-y: auto;
   position: fixed;
   padding: 2rem 4rem;
   width: 100%;
