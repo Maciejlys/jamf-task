@@ -7,46 +7,6 @@ export const fadeInFromBottom = {
   },
 };
 
-const appearTop = {
-  hidden: { opacity: 0, y: [-50, -20, -10, 0], transition: { duration: 0.5 } },
-  shown: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
-const appearBot = {
-  hidden: { opacity: 0, y: [50, 20, 10, 0], transition: { duration: 0.5 } },
-  shown: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
-const appearRight = {
-  hidden: { opacity: 0, x: [50, 20, 10, 0], transition: { duration: 0.5 } },
-  shown: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
-const appearLeft = {
-  hidden: {
-    opacity: 0,
-    x: [-50, -20, -10, 0],
-    transition: { duration: 0.5 },
-  },
-  shown: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
 export const modalVariant = {
   initial: { opacity: 0, x: 1000 },
   shown: {
@@ -60,13 +20,6 @@ export const modalVariant = {
     x: 1000,
     transition: { duration: 0.5 },
   },
-};
-
-export const variantType = {
-  TOP: appearTop,
-  BOTTOM: appearBot,
-  RIGHT: appearRight,
-  LEFT: appearLeft,
 };
 
 export const woobleVariant = {
